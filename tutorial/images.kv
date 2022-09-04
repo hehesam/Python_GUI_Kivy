@@ -1,0 +1,41 @@
+#:import utils kivy.utils
+
+
+<Button>
+    font_size:  32
+    background_normal:  ''
+    #background_color:   utils.get_color_from_hex('#0345AB')
+
+<TextInput>
+    font_size:  40
+    background_color:   utils.get_color_from_hex('#2CE7ED')
+
+
+<MyLayout>
+    canvas.before:
+        Color:
+            #rgba:
+            Rectangle:
+                pos:    self.pos
+                size:   self.size
+
+    BoxLayout:
+        orientation:    "horizontal"
+        size:   root.width, root.height
+        padding:    50
+        spacing:    20
+
+        Image:
+            source: 'images/logo.png'
+            allow_stretch:  True
+            keep_ration:    True
+
+
+
+        Button:
+            text:   "Hi"
+            background_color:   utils.get_color_from_hex('#34ebb7')
+
+
+        Image:
+            source: 'images/dumbbell.png'

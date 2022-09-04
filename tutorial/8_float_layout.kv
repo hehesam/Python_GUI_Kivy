@@ -1,0 +1,57 @@
+#:import utils kivy.utils
+
+
+<Button>
+    font_size:  32
+    size_hint:  (0.3,0.3)
+    background_normal:  ''
+    background_color:   utils.get_color_from_hex('#0345AB')
+
+<TextInput>
+    font_size:  40
+    background_color:   utils.get_color_from_hex('#2CE7ED')
+
+
+<MyLayout>
+    canvas.before:
+        Color:
+            #rgba:
+            Rectangle:
+                pos:    self.pos
+                size:   self.size
+
+    FloatLayout:
+        orientation:    "vertical"
+        size:   root.width, root.height
+        padding:    50
+        spacing:    20
+
+
+
+        Button:
+            text:   "Top Left"
+            #   {x,y,top,bottom, left, right}
+            pos_hint:   {'left':1, 'top':1}
+
+        Button:
+            text:   "Top Right"
+        #   pos_hint:   {'top':1, 'right':1}
+            #or
+            pos_hint:   {'x':0.7, 'top':1}
+
+
+        Button:
+            text:   "Center"
+            pos_hint:   {'top':0.5, 'right':0.8}
+            pos_hint:   {'x':0.35, 'y':0.35}
+
+
+
+        Button:
+            text:   "Bottom Left"
+            pos_hint:   {'x':0}
+
+
+        Button:
+            text:   "Bottom Right"
+            pos_hint:   {'x':0.7, 'bottom':1}
