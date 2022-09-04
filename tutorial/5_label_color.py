@@ -8,7 +8,7 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
-Builder.load_file('label_color.kv')
+Builder.load_file('5_label_color.kv')
 class MyLayout(Widget):
 
 

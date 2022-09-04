@@ -8,7 +8,7 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
-Builder.load_file('inherit.kv')
+Builder.load_file('4_inherit.kv')
 class MyLayout(Widget):
 
 

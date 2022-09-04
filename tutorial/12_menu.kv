@@ -1,0 +1,38 @@
+#:import utils kivy.utils
+
+<MyLayout>
+
+    id: my_widget
+    BoxLayout:
+        orientation:    "vertical"
+        size:   root.width, root.height
+
+        padding:    50
+        spacing:    20
+
+        Image:
+            id: my_image
+            source: ""
+
+        FileChooserIconView:
+            id: filechooser
+            on_selection: my_widget.selected(filechooser.selection)
+
+        FileChooserListView:
+            id: filechooser
+            on_selection: my_widget.selected(filechooser.selection)
+
+
+
+
+<RoundedButton@Button>
+    background_color:   (0,0,0,0)
+    background_normal:  'images/button_normal.png'
+    background_down:   'images/button_down.png'
+    canvas.before:
+        Color:
+            rgba:   (19/255,104/255,240/255,1)
+        RoundedRectangle:
+            size:   self.size
+            pos:    self.pos
+            radius: [118]
